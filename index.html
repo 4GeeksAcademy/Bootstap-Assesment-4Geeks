@@ -5,211 +5,273 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        .try-m {
-            margin: 0 auto;
-        }
-    </style>
+    <title>Bootstrap Xercise El Hadj Mbengue Arroyo</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light pt-2 m-3">
-            <div class="container-fluid">
-                <div>
-                    <h6> <i class="fa-brands fa-instagram fa-xl"></i> Instagram</h6>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-3">
+        <div class="container >
+
+            <p>
+                <a class=" navbar-brand" href="#"><i class="fa-brands fa-instagram fa-xl"> Instagram</i></a>
+            </p>
+
+            <div class="d-flex">
+
+                <!-- modal -->
+
+                <button type="button " class="btn btn-success mt-md-0 me-2 mt-5 " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Create a new post</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p> <strong>Caption:</strong> </p>
+
+
+                                <textarea class="form-control" placeholder="Add the caption of your post here"
+                                    id="floatingTextarea"></textarea>
+                                <button type="button" class="btn btn-light mt-2">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </button>
+                                <button type="button" class="btn btn-light mt-2">
+                                    <i class="fa-solid fa-camera"></i> </button>
+                            </div>
+
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Publish</button>
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="d-flex">
+                <!-- end of modal -->
 
-                        <!-- MODAL -->
-                        <!-- Button trigger modal -->
-                        <button type="button " class="btn btn-success me-3" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Create a new post
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Create a new post</h4>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Caption:</p>
-
-                                        <textarea class="form-control" placeholder="Add the caption of your post here"
-                                            id="floatingTextarea"></textarea>
-                                        <button type="button" class="btn btn-light">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-light">
-                                            <i class="fa-solid fa-camera"></i> </button>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Publish</button>
+                <!-- dropdown -->
+                <div class="me-3 mt-md-0 mt-5">
 
 
-                                    </div>
+
+                    <div class="dropdown me-5">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <hr>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of dropdown -->
+
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT | GALLERIES -->
+    <main>
+
+        <!-- Tab views -->
+        <ul class="nav nav-tabs d-flex justify-content-center mb-3 mt-5" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                        class="fa-regular fa-calendar"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                        class="fa-solid fa-calendar-days"></i></button>
+            </li>
+
+        </ul>
+        <!-- End tab views -->
+
+        <!-- GALLERIES -->
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Gallery One -->
+
+                    <div class="card mb-3 w-50">
+                        <div class="d-flex justify-content-between  p-2">
+                            <div>
+                                <h2 class="card-title">Who's up there?</h2>
+                            </div>
+                            <div>
+                                <p class="mt-2">5 / 12</p>
+                            </div>
+
+
+                        </div>
+
+                        <img src="https://images.pexels.com/photos/6784172/pexels-photo-6784172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="A group of turtles looking at the sky on a lake shore">
+                        <div class="card-body">
+
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas
+                                repudiandae magni illo officia iusto, tenetur excepturi iste sit quisquam provident
+                                error.
+                                Cumque, quo in.</p>
+                            <p><strong>125 likes</strong></p>
+                        </div>
+
+                    </div>
+                    <div class="card mb-3 w-50">
+                        <div class="d-flex justify-content-between  p-2">
+                            <div>
+                                <h2 class="card-title">Time to breath</h2>
+                            </div>
+                            <div>
+                                <p class="mt-2">94 / 2</p>
+                            </div>
+
+
+                        </div>
+
+                        <img src="https://images.pexels.com/photos/2289464/pexels-photo-2289464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Turtle swinming up, going to breath">
+                        <div class="card-body">
+
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas
+                                repudiandae magni illo officia iusto, tenetur excepturi iste sit quisquam provident
+                                error.
+                                Cumque, quo in.</p>
+                            <p><strong> likes</strong></p>
+                        </div>
+
+                    </div>
+                    <div class="card mb-3 w-50">
+                        <div class="d-flex justify-content-between  p-2">
+                            <div>
+                                <h2 class="card-title">Wait what is that?</h2>
+                            </div>
+                            <div>
+                                <p class="mt-2">2 / 37</p>
+                            </div>
+
+
+                        </div>
+
+                        <img src="https://images.pexels.com/photos/68744/loggerhead-turtle-sea-ocean-water-68744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="close portrait of a trutle swimming in blue water">
+                        <div class="card-body">
+
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas
+                                repudiandae magni illo officia iusto, tenetur excepturi iste sit quisquam provident
+                                error.
+                                Cumque, quo in.</p>
+                            <p><strong>23 likes</strong></p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- end of gallery one -->
+            </div>
+
+
+
+            <!-- Galery two -->
+            <div class="tab-pane fade d-flex justify-content-center" id="profile-tab-pane" role="tabpanel"
+                aria-labelledby="profile-tab" tabindex="0">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row  mb-3">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/2570524/pexels-photo-2570524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="turtles swimming along other turtles">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/68744/loggerhead-turtle-sea-ocean-water-68744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="turtle in blu ocean looking at the camera">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/2422913/pexels-photo-2422913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Small turtle swimming up to the surface">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100 "
+                                        alt="turtle swimming through a coral reef. Sun light, blue water">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/10467/pexels-photo-10467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Turtle rising a fin in a greeting manner">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/7722316/pexels-photo-7722316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Small turtles smming in a fish tank">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/109892/pexels-photo-109892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Trutle looking front at thecamera, seem curious">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/2889494/pexels-photo-2889494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Small trutle risikng to the ocean surface to breath">
+                                </div>
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/3894996/pexels-photo-3894996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        class="w-100" alt="Small turtle swimming on muddy water">
                                 </div>
                             </div>
                         </div>
 
-
-                        <!-- DROPDOWN -->
-
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-brands fa-instagram"></i>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                                    <hr>
-                                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
-                                </ul>
-                        </div>
-
                     </div>
+
 
                 </div>
             </div>
-        </nav>
+            <!-- End of galleries -->
 
-
-    </div>
-
-    <!-- Collapsed Gallery -->
-
-    <div class="container d-flex justify-content-center"">
-        <a class=" btn btn-primary me-3 show" data-bs-toggle="collapse" aria-expanded="false" href="#gallery-one"
-        role="button" aria-expanded="false" aria-controls="collapseExample">
-        Galery One
-        </a>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#gallery-two" role="button" aria-expanded="false"
-            aria-controls="collapseExample">
-            Galery Two
-        </a>
-    </div>
-
-
-
-    <br>
-
-
-
-    <div class="d-flex justify-content-center">
-
-        <!-- Gallery One -->
-        <div class="w-50 collapse t-5" id="gallery-one">
-
-            <div class="card mb-3">
-                <img src="https://images.pexels.com/photos/1618606/pexels-photo-1618606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="turtles swinmming in the open ocean">
-                <div class="card-body">
-                    <h5 class="card-title">Turtle time</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas
-                        repudiandae magni illo officia iusto, tenetur excepturi iste sit quisquam provident error.
-                        Cumque, quo in.</p>
-                </div>
-
-            </div>
-            <div class="card mb-3">
-                <img src="https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="turtles swinmming in the open ocean">
-                <div class="card-body">
-                    <h5 class="card-title">Time to breath</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corrupti
-                        possimus sapiente quasi, voluptas hic. Libero aspernatur quisquam quos est rem, ullam
-                        consectetur cum iure?</p>
-                </div>
-
-            </div>
-            <div class="card mb-3">
-                <img src="https://images.pexels.com/photos/1817048/pexels-photo-1817048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="dolphings swinmming in the open ocean">
-                <div class="card-body">
-                    <h5 class="card-title">Oh! what a sunset!</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eveniet illum
-                        dolore laboriosam eius. Repellat perspiciatis quam illo qui possimus modi accusamus officia
-                        eaque distinctio.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Gallery Two -->
-
-        <div class="w-80 collapse" id="gallery-two">
-            <div class="container">
-                <div class="row  mb-3">
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/2570524/pexels-photo-2570524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="turtles swimming">
-                    </div>
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/68744/loggerhead-turtle-sea-ocean-water-68744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="./assets/dolphins.jpg" class="w-100" alt="">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/10467/pexels-photo-10467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/668867/pexels-photo-668867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/3150271/pexels-photo-3150271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/2889494/pexels-photo-2889494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="https://images.pexels.com/photos/12173784/pexels-photo-12173784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            class="w-100" alt="">
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
+    </main>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
